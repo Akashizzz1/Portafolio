@@ -1,0 +1,409 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(22, 21, 21);
+    color: #fff;
+    font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+
+}
+
+/* --- Menu ---*/
+
+.header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 140px;
+    border-radius: 5px;
+    height: 45px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    display: flex;
+}
+.logo img{
+    width: 30px;
+    height: 30px;
+    padding: 25px 0px;
+    margin-right: 10px;
+}
+.menu {
+    font-size: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu a {
+    position: relative;
+  }
+.menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.menu li:first-child {
+    margin-left: 0;
+}
+.menu li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #fff;
+}
+.menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #1D4ED8, #3B82F6, #eb85ab);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+.menu a:hover::before {
+    transform: scaleX(1);
+}
+
+/* --- Cuadro de presentacion ---*/
+
+.presentation{
+    margin: 20px 145px 0px;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 10px;
+}
+
+.me{
+    background-color: black;
+    margin: 0px 5px;
+    padding: 20px;
+    border-radius: 1em;
+    border: 3px solid transparent;
+    position: relative;
+    border: 2px solid transparent; /* Grosor inicial del borde */
+    border-radius: 5px; /* Radio de borde */
+    overflow: hidden; /* Para ocultar el exceso de borde */
+}
+.me h1{
+    font-size: 50px;
+    margin: 0px;
+}
+.me p{
+    font-size: 22px;
+    font-weight: 450;
+}
+
+.cv__button{
+    --tw-text-opacity: 1;
+    display: inline-flex;
+    background-color: rgb(59 130 246 / var(--tw-text-opacity));
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+    font-size: 18px;
+    justify-content: center; 
+    align-items: center;
+    text-decoration: none;
+}
+
+.cv__button:hover{
+    --tw-text-opacity: 1;
+    background-color: rgb(29 78 216 / var(--tw-text-opacity));
+    transform: scale(1.1);
+    transition: all .55s ease;
+    cursor: pointer;
+}
+
+.presentation__button{
+    background-color: #1D4ED8;
+    width: 80px;
+    position: relative;
+    justify-content: center; 
+    align-items: center;
+    top: -23rem;
+    left: 67.5rem;
+}
+
+.links {
+    height: 100px;
+    background-color: black;
+    margin: 20px 0px;
+    border-radius: 1em;
+    border: 3px solid transparent;
+    display: flex;
+    grid-gap: 10px;
+    justify-content: center; 
+    align-items: center;
+}
+.links:hover{
+    transform: translateX(8px);
+    transition: all .55s ease;
+}
+.linkedin, .correo {
+    --tw-bg-opacity: 1;
+    background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+    border: 1px solid rgb(38 38 38);
+    border-radius: 25px;
+    padding: 2px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.linkedin:hover, .correo:hover {
+    background-color: rgb(33 33 33 / var(--tw-bg-opacity));
+}
+.icono{
+    background-color: rgb(204, 204, 204);
+    border-radius: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+.links a .icono {
+    width: 25px;
+    height: 25px; 
+}
+.icono img {
+    max-width: 88%;
+    max-height: 88%;
+    display: block;
+    margin: auto;
+}
+.icono:hover{
+    background-color: rgb(226, 226, 226);
+}
+.cube:hover{
+    transform: scale(1.05);
+    transition: all .55s ease;
+}
+
+/* --- Animacion  ---*/
+
+.me::before, .photo::before, .links::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* --- Cuerpo principal ---*/
+
+.body1, .body2, .contact{
+    background-color: black;
+    margin: 20px 150px 0px;
+    border-radius: 1em;
+    padding: 20px;
+    text-align: center;
+}
+.body1 h2{
+    margin: 0;
+}
+.skills, .exp{
+    --tw-bg-opacity: 1;
+    background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+    text-align: left;
+    padding: 10px;
+    margin: 15px 0px;
+    border-radius: 25px;
+    
+}
+.skills h5, .exp h5{
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-text-opacity));
+    margin-bottom: 0;
+}
+.skills h3, .exp h3{
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+.skills p:first-child {
+    margin-top: 0;
+}
+.skills:hover, .exp:hover{
+    transform: translateX(8px);
+    transition: all .55s ease;
+}
+
+.dev {
+    display: flex;
+    width: 30%;
+}
+.dev img {
+    margin-right: 10px; 
+    width: 20%;
+}
+
+/* --- Proyectos ---*/
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1em;
+    gap: 20px;
+}
+.projects h2 {
+    margin: 0;
+}
+.projects > div {
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    padding: 10px; 
+}
+.project1, .project2, .project3, .project4{
+    --tw-bg-opacity: 1;
+    background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+    border-radius: 1em;
+    text-align: left;
+}
+.project1, .project2 {
+    order: -1;
+    width: 30%;
+}
+.project1 img, .project2 img, .project3 img, .project4 img{
+    width: 100%;
+}
+.project1 h5, .project2 h5, .project3 h5, .project4 h5{
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-text-opacity));
+    margin-bottom: 0;
+}
+.project1:hover, .project2:hover, .project3:hover, .project4:hover{
+    transform: translateX(8px);
+    transition: all .55s ease;
+}
+.project1, .project2, .project3, .project4 {
+    position: relative;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.circle{
+    --tw-text-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-text-opacity));
+    border-radius: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.circle img {
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    margin: auto;
+}
+.circle:hover{
+    --tw-text-opacity: 1;
+    background-color: rgb(29 78 216 / var(--tw-text-opacity));
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .55s ease;
+}
+.social-links {
+    position: absolute; 
+    top: 30px;
+    right: 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links img {
+    border-radius: 25px;
+    width: 26px;
+    height: auto;
+}
+.dev2{
+    display: flex;
+    width: 30%;
+    margin: 10px;
+}
+.dev2 img {
+    margin-right: 10px; 
+    width: 30%;
+}
+
+/* --- Contacto ---*/
+
+.contact{
+    text-align: left;
+}
+.contact h2 {
+    text-align: center;
+}
+.contact input, textarea{
+    --tw-bg-opacity: 1;
+    background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+    border-radius: .5rem;
+    padding: .75rem;
+    flex-direction: column;
+    border: none;
+    width: 98%;
+    margin: 15px 0px 15px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Footer ---*/
+
+footer{
+    background-color: rgb(0, 0, 0);
+    margin: 50px 0px 0px;
+    height: 70px;
+    text-align: center;
+    align-content: center;
+}
+
+/* --- Otros ---*/
+
+@media screen and (max-width: 1208px) {
+    .header {
+        margin: 0 20px;
+    }
+    .presentation {
+        margin: 20px 10px;
+        grid-template-columns: 1fr;
+    }
+    .me, .photo, .links {
+        margin: 0 10px 20px;
+    }
+    .body1 {
+        margin: 0 20px;
+    }
+}
+
+/* --- White Mode ---*/
+
