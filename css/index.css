@@ -283,10 +283,6 @@ body {
     border-radius: 1em;
     text-align: left;
 }
-.project1, .project2 {
-    order: -1;
-    width: 30%;
-}
 .project1 img, .project2 img, .project3 img, .project4 img{
     width: 100%;
 }
@@ -386,24 +382,4 @@ footer{
     text-align: center;
     align-content: center;
 }
-
-/* --- Otros ---*/
-
-@media screen and (max-width: 1208px) {
-    .header {
-        margin: 0 20px;
-    }
-    .presentation {
-        margin: 20px 10px;
-        grid-template-columns: 1fr;
-    }
-    .me, .photo, .links {
-        margin: 0 10px 20px;
-    }
-    .body1 {
-        margin: 0 20px;
-    }
-}
-
-/* --- White Mode ---*/
 
