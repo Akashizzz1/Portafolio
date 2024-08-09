@@ -1,12 +1,15 @@
-document.getElementById('colorButton').addEventListener('click', function() {
-    var currentColor = document.body.style.backgroundColor;
+document.getElementById('copyEmail').addEventListener('click', function(event) {
+    event.preventDefault();
 
-    // Cambiar el color de fondo basado en el color actual
-    if (currentColor === 'rgb(22, 21, 21)') {
-        document.body.style.backgroundColor = 'white';
-        document.body.style.color = 'black';
-    } else {
-        document.body.style.backgroundColor = 'white';
-        document.body.style.color = 'white'; // Cambia el color del texto para que sea visible sobre fondo negro
-    }
-});
+    const textToCopy = "jamesh2910@gmail.com";
+
+    const tempInput = document.createElement('input');
+    tempInput.value = textToCopy;
+    document.body.appendChild(tempInput);
+
+    tempInput.select();
+    document.execCommand('copy');
+
+    document.body.removeChild(tempInput);
+}
+);
