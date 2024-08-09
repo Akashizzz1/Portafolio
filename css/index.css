@@ -96,10 +96,12 @@ body {
 .me h1 {
   font-size: 50px;
   margin: 0px;
+  text-align: justify;
 }
 .me p {
   font-size: 22px;
   font-weight: 450;
+  text-align: justify;
 }
 
 .cv__button {
@@ -248,6 +250,10 @@ body {
   color: rgb(59 130 246 / var(--tw-text-opacity));
   margin-bottom: 0;
 }
+.exp p{
+  text-align: justify;
+}
+
 .skills h3,
 .exp h3 {
   --tw-text-opacity: 1;
@@ -302,6 +308,14 @@ body {
 .project4 img {
   width: 100%;
 }
+
+.project1 p,
+.project2 p,
+.project3 p,
+.project4 p {
+  text-align: justify;
+}
+
 .project1 h5,
 .project2 h5,
 .project3 h5,
